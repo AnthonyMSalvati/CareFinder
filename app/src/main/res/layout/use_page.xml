@@ -81,7 +81,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="17dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="-2dp"
         android:background="#EDFFAB00"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
@@ -95,7 +95,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:clickable="true"
-        android:src="@drawable/x_icon"
+        android:src="@drawable/x_Icon"
         app:backgroundTint="#FFFFFF" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -116,10 +116,10 @@
         android:layout_height="56dp"
         android:layout_alignBottom="@id/toolbar2"
         android:layout_centerHorizontal="false"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
-        android:foreground="@drawable/star"
+        android:foreground="@drawable/star_icon"
         app:backgroundTint="#FFFFFF" />
 
 </RelativeLayout>
