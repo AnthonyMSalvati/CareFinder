@@ -127,7 +127,10 @@
         android:layout_marginBottom="9dp"
         android:clickable="true"
         app:backgroundTint="#FFFFFF"
-        app:srcCompat="@drawable/personIcon" />
+        app:srcCompat="@drawable/personIcon"
+        android:focusable="true"
+        android:layout_alignEnd="@id/toolbar2"
+        android:layout_marginEnd="51dp" />
 
     <TextView
         android:id="@+id/textView3"
