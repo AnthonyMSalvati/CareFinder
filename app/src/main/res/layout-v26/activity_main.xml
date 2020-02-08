@@ -28,7 +28,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:autofillHints=""
-        android:layout_alignParentStart="false" tools:targetApi="o" />
+        android:layout_alignParentStart="false" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
@@ -46,48 +46,50 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="false"
         android:layout_alignParentLeft="false"
-        android:layout_alignParentEnd="false"
         android:layout_alignParentRight="false"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="591dp"
+        android:layout_marginBottom="476dp"
         android:text="Find what you're looking for!"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:fontFamily="@font/chewy" />
+        app:fontFamily="@font/chewy"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false" />
 
     <Button
         android:id="@+id/senior"
         android:layout_width="wrap_content"
         android:layout_height="106dp"
         android:layout_alignTop="@id/textView2"
-        android:layout_alignParentStart="true"
-
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="24dp"
+
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="80dp"
+        android:layout_marginBottom="334dp"
         android:width="110dp"
-        android:text="Senior Care"
-        android:textSize="16sp" />
+        android:text="Senior Aid"
+        android:layout_marginStart="24dp"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/pet"
         android:layout_width="wrap_content"
         android:layout_height="106dp"
         android:layout_alignTop="@id/textView2"
-        android:layout_alignParentEnd="true"
-
         android:layout_alignParentRight="true"
+
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:layout_marginBottom="332dp"
         android:width="110dp"
         android:text="Pet Sitting"
-        android:textSize="16sp" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="24dp" />
 
     <Button
         android:id="@+id/child"
@@ -95,12 +97,11 @@
         android:layout_height="106dp"
         android:layout_alignTop="@id/textView2"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="161dp"
         android:layout_marginLeft="161dp"
         android:layout_marginTop="80dp"
         android:width="110dp"
         android:text="Child Care"
-        android:textSize="16sp" />
+        android:layout_marginStart="161dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -114,46 +115,7 @@
         app:backgroundTint="#FFFFFF"
         app:srcCompat="@drawable/preferences"
         android:layout_alignStart="@id/toolbar2"
-        android:focusable="true"
-        android:layout_marginStart="51dp" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@id/toolbar2"
-        android:layout_alignBottom="@id/toolbar2"
-        android:layout_marginRight="51dp"
-        android:layout_marginBottom="9dp"
-        android:clickable="true"
-        app:backgroundTint="#FFFFFF"
-        app:srcCompat="@drawable/personIcon" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="352dp"
-        android:text="Become a care giver!"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="@font/chewy" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="266dp"
-        android:lineSpacingExtra="8sp"
-        android:text="Join Now"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:typeface="normal" />
+        android:focusable="true" />
 
 
 </RelativeLayout>
