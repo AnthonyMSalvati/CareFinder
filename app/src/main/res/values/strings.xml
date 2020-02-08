@@ -2,4 +2,7 @@
     <string name="app_name">My Application</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="care_finder">Care Finder</string>
+    <string name="user_summary">This is some sample text with information about the person</string>
+    <string name="user_desc">This will be a description of the person being viewed</string>
 </resources>
