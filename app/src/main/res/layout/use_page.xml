@@ -32,8 +32,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="0dp"
-        android:text="@string/user_desc" />
+        android:layout_marginBottom="0dp" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -74,6 +73,7 @@
         android:layout_width="410dp"
         android:layout_height="74dp"
         android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="false"
         android:layout_alignParentRight="false"
@@ -83,8 +83,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginBottom="-2dp"
         android:background="#EDFFAB00"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:minHeight="?attr/actionBarSize" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton2"
