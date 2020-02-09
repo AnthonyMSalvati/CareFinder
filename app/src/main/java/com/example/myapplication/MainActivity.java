@@ -23,7 +23,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button toSignup, toMain;
+    Button senior, child, pet, advertise;
 
     Connection myConn;
     String DBurl = "jdbc:mysql://localhost:3306/people";
