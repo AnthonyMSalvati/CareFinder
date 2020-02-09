@@ -22,15 +22,16 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
 {
-Connection myConn;
-String DBurl = "jdbc:mysql://localhost:3306/people";
-String DBusername = "skirk";
-String DBpwd = "43268790";
-String DBip = "127.0.0.1";
-String DBschema = "people";
-String retrieve = "";
 
-protected String getEmployee(String filter)
+    Connection myConn;
+    String DBurl = "jdbc:mysql://localhost:3306/people";
+    String DBusername = "skirk";
+    String DBpwd = "43268790";
+    String DBip = "127.0.0.1";
+    String DBschema = "people";
+    String retrieve = "";
+
+    protected String getEmployee(String filter)
     {
         String stmt = "select * from employees cross join people on employees.employeeID = " +
                 "people.userID where(" + filter + ")";
@@ -38,9 +39,9 @@ protected String getEmployee(String filter)
     }
 
     public void openSignUp()
-        {
+    {
             //Intent intent = new Intent
-        }
+    }
 
 
     @Override
@@ -49,14 +50,16 @@ protected String getEmployee(String filter)
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button signUpButton = findViewById(R.id.button_join);
+
         signUpButton.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
-                {
+            {
                 openSignUp();
-                }
+            }
         });
+
         TextView userNameField = findViewById(R.id.username_field);
         TextView emailField = findViewById(R.id.user_email);
         TextView password1Field = findViewById(R.id.password_one);
@@ -67,14 +70,13 @@ protected String getEmployee(String filter)
         {
             myConn = DriverManager.getConnection(DBurl,DBusername,DBpwd);
             Statement myStmt = myConn.createStatement();
-//            ResultSet myRS = myStmt.executeQuery();
+            //ResultSet myRS = myStmt.executeQuery();
         }
+
         catch (java.sql.SQLException e)
         {
             e.printStackTrace();
         }
-
-
 
     }
 }
