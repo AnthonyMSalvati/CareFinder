@@ -10,13 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button toSenior, toChild, toPet, toAdvertise;
+    Button toSenior, toChild, toPet;
     FloatingActionButton toMessages;
 
 
@@ -34,8 +33,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                advertise ad = new advertise();
-                ad.whoToPull("senior");
+                moveToSenior();
             }
         });
 
@@ -45,8 +43,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                advertise ad = new advertise();
-                ad.whoToPull("child");
+                moveToChild();
             }
         });
 
@@ -57,21 +54,10 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                advertise ad = new advertise();
-                ad.whoToPull("pet");
+                moveToPet();
             }
         });
 
-
-        /*toAdvertise = findViewById(R.id.button_join);
-        toAdvertise.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                moveToAdvertise();
-            }
-        });*/
 
         toMessages = findViewById(R.id.contacts);
         toMessages.setOnClickListener(new View.OnClickListener()
@@ -86,15 +72,28 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    /*public void moveToAdvertise()
-    {
-        Intent intent = new Intent(MainActivity.this, advertise.class);
-        startActivity(intent);
-    }*/
-
     public void moveToMessages()
     {
         Intent intent = new Intent(MainActivity.this, Messages.class);
+        startActivity(intent);
+    }
+
+    public void moveToPet()
+    {
+        Intent intent = new Intent(MainActivity.this, advertise.class);
+        intent.putExtra("type", "pet");
+        startActivity(intent);
+    }
+    public void moveToSenior()
+    {
+        Intent intent = new Intent(MainActivity.this, advertise.class);
+        intent.putExtra("type", "senior");
+        startActivity(intent);
+    }
+    public void moveToChild()
+    {
+        Intent intent = new Intent(MainActivity.this, advertise.class);
+        intent.putExtra("type","child");
         startActivity(intent);
     }
 
@@ -123,4 +122,5 @@ public class MainActivity extends AppCompatActivity
             user.getUserInput();
         }
     }
+
 }
