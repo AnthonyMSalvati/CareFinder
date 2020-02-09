@@ -15,7 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button toSenior, toChild, toPet;
+    Button toSenior, toChild, toPet, makePost;
     FloatingActionButton toMessages;
 
 
@@ -66,6 +66,16 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 moveToMessages();
+            }
+        });
+
+        makePost = findViewById(R.id.button_join);
+        makePost.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToPost();
             }
         });
 
@@ -121,6 +131,12 @@ public class MainActivity extends AppCompatActivity
             User user = new User();
             user.getUserInput();
         }
+    }
+
+    public void moveToPost()
+    {
+        Intent intent = new Intent(MainActivity.this, Post.class);
+        startActivity(intent);
     }
 
 }
