@@ -5,6 +5,18 @@
     android:layout_height="match_parent" android:background="#E80D79A3"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_try"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:textSize="24sp" />
+
     <EditText android:id="@+id/brandName" android:layout_width="match_parent"
         android:layout_height="48dp" android:layout_alignParentLeft="false"
         android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
@@ -23,13 +35,6 @@
         android:layout_marginLeft="1dp" android:layout_marginTop="17dp"
         android:layout_marginBottom="-2dp" android:background="#EDFFAB00"
         android:minHeight="?attr/actionBarSize" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/button_home" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" android:layout_marginBottom="9dp"
-        android:clickable="true" android:foreground="@drawable/home_button"
-        app:backgroundTint="#FFFFFF" app:srcCompat="@drawable/home_button" />
 
     <TextView
         android:id="@+id/ask_user"
