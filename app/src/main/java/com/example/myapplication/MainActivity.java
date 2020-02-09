@@ -3,27 +3,19 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import java.sql.*;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
 
-import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.text.AutoText;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.myapplication.ui.main.SectionsPagerAdapter;
-
-import org.w3c.dom.Text;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity
 {
     Button toSenior, toChild, toPet, toAdvertise;
+    FloatingActionButton toMessages;
 
     Connection myConn;
     String DBurl = "jdbc:mysql://localhost:3306/people";
@@ -86,12 +78,28 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        toMessages = findViewById(R.id.contacts);
+        toMessages.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToMessages();
+            }
+        });
+
 
     }
 
     public void moveToAdvertise()
     {
         Intent intent = new Intent(MainActivity.this, advertise.class);
+        startActivity(intent);
+    }
+
+    public void moveToMessages()
+    {
+        Intent intent = new Intent(MainActivity.this, Messages.class);
         startActivity(intent);
     }
 }
