@@ -12,6 +12,7 @@ import java.sql.Statement;
 
 public class User extends AppCompatActivity
 {
+	public ResultSet myRs;
 	private String firstName, lastName, address, password, email, userName;
 	private int userID;
 
@@ -23,7 +24,9 @@ public class User extends AppCompatActivity
 	String DBschema = "people";
 	String retrieve = "";
 
-	protected String getEmployee(String filter)
+
+	//the method below will return all
+		protected ResultSet getEmployee(String filter)
 		{
 		String stmt = "select * from employees cross join people on employees.employeeID = " +
 				"people.userID where(" + filter + ")";
@@ -32,14 +35,14 @@ public class User extends AppCompatActivity
 		{
 			myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
 			Statement myStmt = myConn.createStatement();
-			//ResultSet myRS = myStmt.executeQuery();
+			 this.myRs = myStmt.executeQuery(stmt);
 		}
 
 		catch(SQLException e)
 		{
 			e.printStackTrace();
 		}
-		return stmt;
+		return myRs;
 		}
 
 
@@ -48,11 +51,26 @@ public class User extends AppCompatActivity
 	public User ()
     {
 
-
 	}
 
 	public void sendToSQL()
 	{
+	try
+	{
+		myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
+		Statement myStmt = myConn.createStatement();
+
+		String sql = "INSERT INTO `people`.`people` (`userID`, `FirstName`, `LastName`, `Address`, `password`, `email`, `userName`) "
+				+ "VALUES ('"+ this.userID + "', '" + this.firstName +
+				"', '"+ this.lastName +"', '"+ this.address + "', " +
+				"'"+ this.password + "', '"+ this.email + "', '"+ this.userName +"')";
+
+		myStmt.executeUpdate(sql);
+	}
+	catch (SQLException e)
+	{
+		e.printStackTrace();
+	}
 
 	}
 
