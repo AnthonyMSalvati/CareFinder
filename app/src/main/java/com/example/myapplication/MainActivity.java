@@ -23,6 +23,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
 {
+    Button toSignup, toMain;
 
     Connection myConn;
     String DBurl = "jdbc:mysql://localhost:3306/people";
@@ -39,27 +40,13 @@ public class MainActivity extends AppCompatActivity
         return stmt;
     }
 
-    public void openSignUp()
-    {
-            Intent intent = new Intent(MainActivity.this, User.class);
-    }
+
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button signUpButton = findViewById(R.id.button_join);
-
-        signUpButton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                openSignUp();
-            }
-        });
 
         TextView userNameField = findViewById(R.id.username_field);
         TextView emailField = findViewById(R.id.user_email);
@@ -67,15 +54,11 @@ public class MainActivity extends AppCompatActivity
         TextView password2Field = findViewById(R.id.password_two);
 
 
-        try
-        {
-            myConn = DriverManager.getConnection(DBurl,DBusername,DBpwd);
+        try {
+            myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
             Statement myStmt = myConn.createStatement();
             //ResultSet myRS = myStmt.executeQuery();
-        }
-
-        catch (java.sql.SQLException e)
-        {
+        } catch (java.sql.SQLException e) {
             e.printStackTrace();
         }
 
