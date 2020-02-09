@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView userNameField = findViewById(R.id.username_field);
-        TextView emailField = findViewById(R.id.user_email);
-        TextView password1Field = findViewById(R.id.password_one);
-        TextView password2Field = findViewById(R.id.password_two);
-
 
         toSenior = findViewById(R.id.button_senior);
         /*
