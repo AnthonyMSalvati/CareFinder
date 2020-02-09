@@ -14,7 +14,7 @@
         android:layout_height="68dp"
         android:layout_alignTop="@id/user_one"
         android:layout_marginTop="100dp"
-        tools:srcCompat="@tools:sample/avatars[13]" />
+        android:src="@drawable/stock_icon" />
 
     <EditText
         android:id="@+id/brandName"
@@ -67,11 +67,11 @@
 
     <ImageView
         android:id="@+id/user_one"
-        android:layout_width="82dp"
-        android:layout_height="68dp"
+        android:layout_width="76dp"
+        android:layout_height="67dp"
         android:layout_alignTop="@id/brandName"
-        android:layout_marginTop="70dp"
-        tools:srcCompat="@tools:sample/avatars[2]" />
+        android:layout_marginTop="71dp"
+        android:src="@drawable/images" />
 
     <TextView
         android:id="@+id/message_example"
