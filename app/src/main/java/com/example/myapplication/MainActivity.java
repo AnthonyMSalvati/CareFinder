@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        startListener();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -101,5 +103,31 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(MainActivity.this, Messages.class);
         startActivity(intent);
+    }
+
+    public void startListener()
+    {
+        Thread listener = new Thread(() ->
+        {
+            try
+            {
+                this.run();
+            }
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
+        });
+        listener.start();
+    }
+
+    public void run()
+    {
+        while (true)
+        {
+            User user = new User();
+            user.getUserInput();
+        }
     }
 }
