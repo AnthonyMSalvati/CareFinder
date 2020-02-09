@@ -22,6 +22,16 @@ public class User extends AppCompatActivity
 
 		}
 
+		public void sendAttributes()
+		{
+
+		}
+
+		public void getAttributes()
+		{
+
+		}
+
     public User user()
     {
 
