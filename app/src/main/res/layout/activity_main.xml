@@ -156,7 +156,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="266dp"
         android:lineSpacingExtra="8sp"
-        android:text="Join Now"
+        android:text="Advertise"
         android:textSize="24sp"
         android:textStyle="bold"
         android:typeface="normal" />
