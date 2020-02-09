@@ -19,6 +19,7 @@ public class User extends AppCompatActivity
 		this.password = userPassword;
 		this.email = userEmail;
 		this.userName = userNameInput;
+
 		}
 
     public User user()
