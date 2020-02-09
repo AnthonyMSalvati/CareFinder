@@ -23,7 +23,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button toSignup;
+    Button toSignup, toMain;
 
     Connection myConn;
     String DBurl = "jdbc:mysql://localhost:3306/people";
@@ -54,16 +54,7 @@ public class MainActivity extends AppCompatActivity
         TextView password1Field = findViewById(R.id.password_one);
         TextView password2Field = findViewById(R.id.password_two);
 
-        toSignup = findViewById(R.id.sign_up);
-        toSignup.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                moveToSignupPage();
 
-            }
-        });
 
         try
         {
@@ -77,6 +68,27 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
+        toSignup = findViewById(R.id.sign_up);
+        toSignup.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToSignupPage();
+
+            }
+        });
+
+        toMain = findViewById(R.id.login_try);
+        toMain.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToMainPage();
+            }
+        });
+
     }
 
     public void moveToSignupPage()
@@ -84,4 +96,11 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(MainActivity.this, SignUp.class);
         startActivity(intent);
     }
+
+    public void moveToMainPage()
+    {
+        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
