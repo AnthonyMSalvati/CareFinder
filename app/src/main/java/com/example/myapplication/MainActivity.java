@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import java.sql.*;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,21 +29,41 @@ public class MainActivity extends AppCompatActivity
 
 
         toSenior = findViewById(R.id.button_senior);
-        /*
-         * TODO: pull senior data and move to use_page with that data
-         */
+        toSenior.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                advertise ad = new advertise();
+                ad.whoToPull("senior");
+            }
+        });
 
         toChild = findViewById(R.id.button_child);
-        /*
-         * TODO: pull child data and move to use_page with that data
-         */
+        toChild.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                advertise ad = new advertise();
+                ad.whoToPull("child");
+            }
+        });
+
 
         toPet = findViewById(R.id.button_pet);
-        /*
-         * TODO: pull pet data and move to use_page with that data
-         */
+        toPet.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                advertise ad = new advertise();
+                ad.whoToPull("pet");
+            }
+        });
 
-        toAdvertise = findViewById(R.id.button_join);
+
+        /*toAdvertise = findViewById(R.id.button_join);
         toAdvertise.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -49,7 +71,7 @@ public class MainActivity extends AppCompatActivity
             {
                 moveToAdvertise();
             }
-        });
+        });*/
 
         toMessages = findViewById(R.id.contacts);
         toMessages.setOnClickListener(new View.OnClickListener()
@@ -64,11 +86,11 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void moveToAdvertise()
+    /*public void moveToAdvertise()
     {
         Intent intent = new Intent(MainActivity.this, advertise.class);
         startActivity(intent);
-    }
+    }*/
 
     public void moveToMessages()
     {
