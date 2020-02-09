@@ -10,6 +10,13 @@ public class User extends AppCompatActivity
 {
     private String name, password, email;
 
+    public User (String userName, String userPassword, String userEmail)
+    {
+      this.name = userName;
+      this.password = userPassword;
+      this.email = userEmail;
+    }
+
     public User user()
     {
 
