@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import java.sql.*;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity
 
     public void openSignUp()
     {
-            //Intent intent = new Intent
+            Intent intent = new Intent(MainActivity.this, User.class);
     }
 
 
