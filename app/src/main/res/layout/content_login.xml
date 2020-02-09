@@ -72,7 +72,7 @@
         android:layout_below="@id/ask_password"
         android:layout_alignLeft="@id/ask_password"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textPassword"
         android:textColor="#FFFFFF"
         android:textSize="24sp" />
 
