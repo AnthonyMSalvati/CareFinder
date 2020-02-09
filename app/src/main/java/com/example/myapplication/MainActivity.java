@@ -23,7 +23,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity
 {
-    Button senior, child, pet, advertise;
+    Button toSenior, toChild, toPet, toAdvertise;
 
     Connection myConn;
     String DBurl = "jdbc:mysql://localhost:3306/people";
@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity
                 "people.userID where(" + filter + ")";
         return stmt;
     }
-
-
 
 
     @Override
@@ -62,5 +60,38 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
+
+        toSenior = findViewById(R.id.button_senior);
+        /*
+         * TODO: pull senior data and move to use_page with that data
+         */
+
+        toChild = findViewById(R.id.button_child);
+        /*
+         * TODO: pull child data and move to use_page with that data
+         */
+
+        toPet = findViewById(R.id.button_pet);
+        /*
+         * TODO: pull pet data and move to use_page with that data
+         */
+
+        toAdvertise = findViewById(R.id.button_join);
+        toAdvertise.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToAdvertise();
+            }
+        });
+
+
+    }
+
+    public void moveToAdvertise()
+    {
+        Intent intent = new Intent(MainActivity.this, advertise.class);
+        startActivity(intent);
     }
 }
