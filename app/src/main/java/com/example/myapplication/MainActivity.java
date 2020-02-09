@@ -9,6 +9,7 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.AutoText;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.example.myapplication.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity
 {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
