@@ -11,40 +11,30 @@ public class User extends AppCompatActivity
 	private String firstName, lastName, address, password, email, userName;
 	private int userID;
 
-	public User (String firstNameInput, String lastNameInput,String addressInput, String userPassword, String userEmail, String userNameInput)
-		{
-		this.firstName = firstNameInput;
-		this.lastName = lastNameInput;
-		this.address = addressInput;
-		this.password = userPassword;
-		this.email = userEmail;
-		this.userName = userNameInput;
-
-		}
-
-		public void sendAttributes()
-		{
-
-		}
-
-		public void getAttributes()
-		{
-
-		}
-
-    public User user()
+	public User ()
     {
 
-        return null;
-    }
+
+	}
+
+	public void sendToSQL()
+	{
+
+	}
+
+	public void getUserInput()
+	{
+
+	}
+
 
     private void setName()
-	    {
-	    	TextView nameField = findViewById(R.id.username);
-	    	String temp = nameField.getText().toString();
-	    	this.firstName = temp.split(" ")[0];
-	    	this.lastName = temp.split(" ")[1];
-	    }
+	{
+	   	TextView nameField = findViewById(R.id.username);
+	   	String temp = nameField.getText().toString();
+	   	this.firstName = temp.split(" ")[0];
+	   	this.lastName = temp.split(" ")[1];
+	}
 
     public String getName()
     {
