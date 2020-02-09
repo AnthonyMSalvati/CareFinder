@@ -44,10 +44,9 @@ public class MainActivity extends AppCompatActivity
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_main);
 
         TextView userNameField = findViewById(R.id.username_field);
         TextView emailField = findViewById(R.id.user_email);
@@ -55,52 +54,13 @@ public class MainActivity extends AppCompatActivity
         TextView password2Field = findViewById(R.id.password_two);
 
 
-
-        try
-        {
-            myConn = DriverManager.getConnection(DBurl,DBusername,DBpwd);
+        try {
+            myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
             Statement myStmt = myConn.createStatement();
             //ResultSet myRS = myStmt.executeQuery();
-        }
-
-        catch (java.sql.SQLException e)
-        {
+        } catch (java.sql.SQLException e) {
             e.printStackTrace();
         }
 
-        toSignup = findViewById(R.id.sign_up);
-        toSignup.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                moveToSignupPage();
-
-            }
-        });
-
-        toMain = findViewById(R.id.login_try);
-        toMain.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                moveToMainPage();
-            }
-        });
-
     }
-
-    public void moveToSignupPage()
-    {
-        Intent intent = new Intent(MainActivity.this, SignUp.class);
-        startActivity(intent);
-    }
-
-    public void moveToMainPage()
-    {
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-    }
-
 }
