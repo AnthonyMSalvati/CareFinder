@@ -4,12 +4,46 @@ package com.example.myapplication;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 
 public class User extends AppCompatActivity
 {
 	private String firstName, lastName, address, password, email, userName;
 	private int userID;
+
+	Connection myConn;
+	String DBurl = "jdbc:mysql://localhost:3306/people";
+	String DBusername = "skirk";
+	String DBpwd = "43268790";
+	String DBip = "127.0.0.1";
+	String DBschema = "people";
+	String retrieve = "";
+
+	protected String getEmployee(String filter)
+		{
+		String stmt = "select * from employees cross join people on employees.employeeID = " +
+				"people.userID where(" + filter + ")";
+
+		try
+		{
+			myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
+			Statement myStmt = myConn.createStatement();
+			//ResultSet myRS = myStmt.executeQuery();
+		}
+
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return stmt;
+		}
+
+
+
 
 	public User ()
     {

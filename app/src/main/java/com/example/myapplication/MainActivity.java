@@ -17,21 +17,6 @@ public class MainActivity extends AppCompatActivity
     Button toSenior, toChild, toPet, toAdvertise;
     FloatingActionButton toMessages;
 
-    Connection myConn;
-    String DBurl = "jdbc:mysql://localhost:3306/people";
-    String DBusername = "skirk";
-    String DBpwd = "43268790";
-    String DBip = "127.0.0.1";
-    String DBschema = "people";
-    String retrieve = "";
-
-    protected String getEmployee(String filter)
-    {
-        String stmt = "select * from employees cross join people on employees.employeeID = " +
-                "people.userID where(" + filter + ")";
-        return stmt;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,15 +29,6 @@ public class MainActivity extends AppCompatActivity
         TextView emailField = findViewById(R.id.user_email);
         TextView password1Field = findViewById(R.id.password_one);
         TextView password2Field = findViewById(R.id.password_two);
-
-
-        try {
-            myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
-            Statement myStmt = myConn.createStatement();
-            //ResultSet myRS = myStmt.executeQuery();
-        } catch (java.sql.SQLException e) {
-            e.printStackTrace();
-        }
 
 
         toSenior = findViewById(R.id.button_senior);
