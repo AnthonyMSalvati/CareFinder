@@ -28,37 +28,6 @@ public class advertise extends AppCompatActivity
         makeDescription(kind);
     }
 
-    public void whoToPull(String type)
-    {
-        ArrayList<User> userList = new ArrayList<>();
-        switch (type)
-        {
-            case ("senior"):
-                /*pull senior aid people
-                 *for <member> in <task>
-                 *    add to array
-                 * end for
-                 * start putting people into queue
-                 */
-
-            case ("child"):
-                /*pull child care people
-                 *for <member> in <task>
-                 *    add to array
-                 * end for
-                 * start putting people into queue
-                 */
-            case ("pet"):
-                /*pull pet people
-                 *for <member> in <task>
-                 *    add to array
-                 * end for
-                 * start putting people into queue
-                 */
-
-        }
-
-    }
     private void makeDescription(String type)
     {
         TextView username = findViewById(R.id.user_desc);
