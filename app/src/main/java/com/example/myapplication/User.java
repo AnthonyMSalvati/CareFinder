@@ -55,22 +55,22 @@ public class User extends AppCompatActivity
 
 	public void sendToSQL()
 	{
-	try
-	{
-		myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
-		Statement myStmt = myConn.createStatement();
+	    try
+	    {
+	    	myConn = DriverManager.getConnection(DBurl, DBusername, DBpwd);
+		    Statement myStmt = myConn.createStatement();
 
-		String sql = "INSERT INTO `people`.`people` (`userID`, `FirstName`, `LastName`, `Address`, `password`, `email`, `userName`) "
+		    String sql = "INSERT INTO `people`.`people` (`userID`, `FirstName`, `LastName`, `Address`, `password`, `email`, `userName`) "
 				+ "VALUES ('"+ this.userID + "', '" + this.firstName +
 				"', '"+ this.lastName +"', '"+ this.address + "', " +
 				"'"+ this.password + "', '"+ this.email + "', '"+ this.userName +"')";
 
-		myStmt.executeUpdate(sql);
-	}
-	catch (SQLException e)
-	{
-		e.printStackTrace();
-	}
+		    myStmt.executeUpdate(sql);
+	    }
+	    catch (SQLException e)
+	    {
+                e.printStackTrace();
+        }
 
 	}
 
