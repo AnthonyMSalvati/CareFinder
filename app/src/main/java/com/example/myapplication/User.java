@@ -8,14 +8,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class User extends AppCompatActivity
 {
-    private String name, password, email;
+	private String firstName, lastName, address, password, email, userName;
+	private int userID;
 
-    public User (String userName, String userPassword, String userEmail)
-    {
-      this.name = userName;
-      this.password = userPassword;
-      this.email = userEmail;
-    }
+	public User (String firstNameInput, String lastNameInput,String addressInput, String userPassword, String userEmail, String userNameInput)
+		{
+		this.firstName = firstNameInput;
+		this.lastName = lastNameInput;
+		this.address = addressInput;
+		this.password = userPassword;
+		this.email = userEmail;
+		this.userName = userNameInput;
+		}
 
     public User user()
     {
@@ -23,12 +27,20 @@ public class User extends AppCompatActivity
         return null;
     }
 
+    private void setName()
+	    {
+	    	TextView nameField = findViewById(R.id.username);
+	    	String temp = nameField.getText().toString();
+	    	this.firstName = temp.split(" ")[0];
+	    	this.lastName = temp.split(" ")[1];
+	    }
 
     public String getName()
     {
         TextView nameField = findViewById(R.id.username);
-        name = nameField.getText().toString();
-        return name;
+        userName = nameField.getText().toString();
+
+        return userName;
     }
 
     public String getPassword()
