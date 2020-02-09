@@ -38,6 +38,11 @@ public class User extends AppCompatActivity
         {
             password = passOne;
         }
+        else
+        {
+            passwordField.setText("Passwords do not match");
+        }
+
         return password;
     }
 
