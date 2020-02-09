@@ -77,8 +77,21 @@ public class MainActivity extends AppCompatActivity
          */
 
         toAdvertise = findViewById(R.id.button_join);
+        toAdvertise.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                moveToAdvertise();
+            }
+        });
 
 
+    }
 
+    public void moveToAdvertise()
+    {
+        Intent intent = new Intent(MainActivity.this, advertise.class);
+        startActivity(intent);
     }
 }

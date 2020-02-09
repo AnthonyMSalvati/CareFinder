@@ -5,4 +5,5 @@
     <string name="care_finder">Care Finder</string>
     <string name="title_activity_sign_up">SignUp</string>
     <string name="title_activity_login">Login</string>
+    <string name="title_activity_advertise">advertise</string>
 </resources>
