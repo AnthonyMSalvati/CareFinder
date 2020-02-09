@@ -30,11 +30,12 @@ public class advertise extends AppCompatActivity
 
     private void makeDescription(String type)
     {
-        TextView username = findViewById(R.id.user_desc);
+        TextView userDesc = findViewById(R.id.user_desc);
+        TextView username = findViewById(R.id.username);
 
         if (type.equals("senior"))
         {
-            username.append("senior");
+            username.setText("senior");
             /*pull senior aid people
              *for <member> in <task>
              *    add to array
@@ -44,7 +45,7 @@ public class advertise extends AppCompatActivity
         }
         else if (type.equals("child"))
         {
-            username.append("child");
+            username.setText("child");
             /*pull child care people
              *for <member> in <task>
              *    add to array
@@ -54,7 +55,7 @@ public class advertise extends AppCompatActivity
         }
         else if (type.equals("pet"))
         {
-            username.append("pet");
+            username.setText("pet");
             /*pull pet people
              *for <member> in <task>
              *    add to array
